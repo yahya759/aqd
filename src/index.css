@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-primary: #00b074;
+  --color-brand-secondary: #d4af37;
+  --color-brand-bg: #070c0a;
+  --color-brand-surface: #0e1613;
+  --color-brand-surface-low: #090f0d;
+  --color-brand-surface-high: #14221d;
+  --color-brand-surface-highest: #1a2d27;
+  --color-brand-on-surface: #e2e8f0;
+  --color-brand-on-surface-variant: #94a3b8;
+  --color-brand-outline-variant: #1c2b26;
+  --color-brand-error: #f87171;
+  --color-on-surface: #e2e8f0;
+  --color-on-surface-variant: #94a3b8;
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+  
+  .ltr {
+    direction: ltr;
+  }
+
+  .glass {
+    background: rgba(14, 22, 19, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(28, 43, 38, 0.5);
+  }
+
+  .ai-glow {
+    box-shadow: 0 0 25px rgba(0, 176, 116, 0.12);
+  }
+
+  .vision-gradient {
+    background: linear-gradient(135deg, #8dc63f 0%, #00b074 50%, #00b4d8 100%);
+  }
+
+  .vision-text-gradient {
+    background: linear-gradient(135deg, #8dc63f 0%, #00b074 50%, #00b4d8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .vision-border-glow {
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.2), 0 0 30px rgba(0, 176, 116, 0.1);
+  }
+
+  /* Custom Scrollbar for better consistency */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #070c0a;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #14221d;
+    border-radius: 99px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #00b074;
+  }
+
+  .saudi-backdrop-light {
+    background: linear-gradient(135deg, #e4f6eb 0%, #f6fdf9 35%, #ffffff 60%, #e0faf1 85%, #d1f5eb 100%);
+  }
+
+  .saudi-backdrop-dark {
+    background: linear-gradient(135deg, #030d07 0%, #070c0a 50%, #04120c 75%, #010e0a 100%);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #070c0a;
+  color: #e2e8f0;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease forwards;
+}
