@@ -1,0 +1,6 @@
+{
+  "name": "عقد (Aqd)",
+  "description": "المنصة العربية الأولى المتخصصة في الاستثمار وتمويل مشاريع الذكاء الاصطناعي وصكوك التقنية المالية المتوافقة مع الشريعة الإسلامية ورؤية 2030.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
